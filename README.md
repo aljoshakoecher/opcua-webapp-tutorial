@@ -27,7 +27,6 @@ And you should also be able to extend the backend by adding modules with additio
 - Node.js installed. Download from https://nodejs.org/en/ and install.
 - Basic knowledge of (object-oriented) programming in general (terms like "class", "method", ... and concepts such as if-statements, loops)
 - Basic knowledge of HTTP messaging (request & response, HTTP methods, ...). Something like [this](https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/) or [this](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) should suffice.
-
 - Optional: Basic understanding of Angular and NestJS. This is optional, but it will be much easier for you to follow along if you don't hear all these concepts for the first time. 
 
 ## Lessons
