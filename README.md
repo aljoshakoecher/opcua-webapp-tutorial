@@ -1,9 +1,14 @@
 <p align="center">
     <img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/opc-ua-icon.png?raw=true">
 	<img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/angular-icon.png?raw=true">
-	<img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/nest-icon.png?raw=true">
+	<img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/nestjs-icon.png?raw=true">
+
+<h1>Development of a Web App for Machine Communication via OPC UA</h1>
+
+<h2>A Hands-on Tutorial</h2>
 </p>
-# Tutorial: Development of a Web App for Machine Communication via OPC UA
+
+
 
 ## Goals
 - You learn the basics of modern web development with two major frameworks: [Angular](https://angular.io/) in the frontend and [NestJS](https://nestjs.com/) in the backend
