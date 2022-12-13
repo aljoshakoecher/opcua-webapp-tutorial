@@ -1,3 +1,8 @@
+<p align="center">
+    <img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/opc-ua-icon.png?raw=true">
+	<img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/angular-icon.png?raw=true">
+	<img height="100px" src="https://github.com/aljoshakoecher/opcua-webapp-tutorial/blob/documentation/images/images/nest-icon.png?raw=true">
+</p>
 # Tutorial: Development of a Web App for Machine Communication via OPC UA
 
 ## Goals
