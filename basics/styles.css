@@ -1,0 +1,15 @@
+.bigButton {
+	background-color: dodgerblue;
+	font-size: larger;
+	color:white;
+	border-radius: 6px;
+	border:1px solid darkgray;
+}
+
+form {
+	width: 50%;
+}
+#lastName {
+	width:40%;
+	min-width: 200px;
+}
