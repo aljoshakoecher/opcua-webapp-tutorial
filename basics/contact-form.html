@@ -3,10 +3,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+	<script>
+		// Anlegen von Variablen:
+		const x = 10;
+		let y;
+		
+		y = 10;
+
+		console.log("Hello World");
+		console.log(x);
+
+		const myArray = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
+
+		const homer = {
+			firstName: "Homer",
+			lastName: "Simpson",
+			age: 40,
+			isAdult: function(){
+				return (this.age >= 18)
+			}
+		}
+
+		y = 5;
+
+		console.log(`Vorname:  ${homer.firstName}, Nachname: ${homer.lastName}`);
+		console.log("Ist Homer ein Erwachsener?", homer.isAdult())
+		console.log("x* y: ", (x * y));
+	</script>
 </head>
 
 
-<!-- Lets add bootstrap to our form -->
 <div class="container">
 	<div class="row">
 		<div class="col-12">
