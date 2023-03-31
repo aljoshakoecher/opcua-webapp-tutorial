@@ -21,8 +21,44 @@
 			age: 40,
 			isAdult: function(){
 				return (this.age >= 18)
-			}
+			},
+			beersDrunk: 0
 		}
+
+		if(homer.isAdult()) {
+			homer.beersDrunk++		// If Homer is an adult, he can have a beer
+		}
+
+		let jobsDone = ["clean car", "fix roof", "paint shed", "repair bike"];
+
+		for (let i = 0; i < jobsDone.length; i++) {
+			homer.beersDrunk++;
+		}
+		console.log(`Beers: ${homer.beersDrunk}`)
+
+		for (key in homer) {
+			console.log(key)	// Loop over object keys
+		}
+
+		// for (value of homer) {
+		// 	console.log(value)	// Doesn't work, homer is not iterable
+		// }
+
+		jobsDone.forEach(job => {
+			console.log(`Homer did the job "${job}" and had a beer`)
+		})
+
+		jobsDone = jobsDone.map(job => makeCamelCase(job))
+
+		
+		
+		function makeCamelCase(job) {
+			const positionAfterSpace = job.indexOf(" ") + 1;
+			const camelCasedJob = job.charAt(0).toUpperCase() + job.slice(1, positionAfterSpace) + job.charAt(positionAfterSpace).toUpperCase() + job.slice(positionAfterSpace+1);
+			return camelCasedJob;
+		}
+		console.log(jobsDone)
+
 
 		y = 5;
 
