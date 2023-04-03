@@ -4,67 +4,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 	<script>
-		// Anlegen von Variablen:
-		const x = 10;
-		let y;
-		
-		y = 10;
-
-		console.log("Hello World");
-		console.log(x);
-
-		const myArray = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
-
-		const homer = {
-			firstName: "Homer",
-			lastName: "Simpson",
-			age: 40,
-			isAdult: function(){
-				return (this.age >= 18)
-			},
-			beersDrunk: 0
+		function submitForm() {
+			const firstName = document.getElementById("firstName").value
+			const lastName = document.getElementById("lastName").value
+			console.log(`Entered: ${firstName} ${lastName}`);
+	
+			// Display warning if first or last name is missing
+			if (!(firstName && lastName)) {
+				const warningElement = document.getElementById("warning")
+				warningElement.style.display = "block"
+				setTimeout(() => warningElement.style.display = "none", 5000)
+			}
 		}
-
-		if(homer.isAdult()) {
-			homer.beersDrunk++		// If Homer is an adult, he can have a beer
-		}
-
-		let jobsDone = ["clean car", "fix roof", "paint shed", "repair bike"];
-
-		for (let i = 0; i < jobsDone.length; i++) {
-			homer.beersDrunk++;
-		}
-		console.log(`Beers: ${homer.beersDrunk}`)
-
-		for (key in homer) {
-			console.log(key)	// Loop over object keys
-		}
-
-		// for (value of homer) {
-		// 	console.log(value)	// Doesn't work, homer is not iterable
-		// }
-
-		jobsDone.forEach(job => {
-			console.log(`Homer did the job "${job}" and had a beer`)
-		})
-
-		jobsDone = jobsDone.map(job => makeCamelCase(job))
-
-		
-		
-		function makeCamelCase(job) {
-			const positionAfterSpace = job.indexOf(" ") + 1;
-			const camelCasedJob = job.charAt(0).toUpperCase() + job.slice(1, positionAfterSpace) + job.charAt(positionAfterSpace).toUpperCase() + job.slice(positionAfterSpace+1);
-			return camelCasedJob;
-		}
-		console.log(jobsDone)
-
-
-		y = 5;
-
-		console.log(`Vorname:  ${homer.firstName}, Nachname: ${homer.lastName}`);
-		console.log("Ist Homer ein Erwachsener?", homer.isAdult())
-		console.log("x* y: ", (x * y));
 	</script>
 </head>
 
@@ -78,17 +29,22 @@
 	<form>
 		<div class="row">
 			<div class="col-sm-6">
-				<label for="firstName" class="form-label">Vorname</label>
+				<label for="firstName" class="form-label">First Name</label>
 				<input id="firstName" class="form-control" type="text">
 			</div>
 			<div class="col-sm-6">
-				<label for="lastName" class="form-label">Nachname</label>
+				<label for="lastName" class="form-label">Last Name</label>
 				<input id="lastName" class="form-control" type="text">
+			</div>
+		</div>
+		<div class="row mt-3" id="warning" style="display: none">
+			<div class="col">
+				<div class="alert alert-danger">Make sure you enter both first and last name!</div>
 			</div>
 		</div>
 		<div class="row mt-3">
 			<div class="col-12">
-				<button type="button" class="float-end btn btn-success">Absenden</button>
+				<button type="button" onclick="submitForm()" class="float-end btn btn-success">Absenden</button>
 			</div>
 		</div>
 	</form>
