@@ -14,7 +14,39 @@
 				const warningElement = document.getElementById("warning")
 				warningElement.style.display = "block"
 				setTimeout(() => warningElement.style.display = "none", 5000)
+				return;
 			}
+
+			// If both first and last name were entered: Display confirmation "puzzle"
+			numbersArray = document.getElementById('numbersArray');
+			const randoms = getRandomNumbers(6)
+			console.log(randoms)
+			numbersArray.value = randoms;
+			const confirmationBox = document.getElementById("confirmationBox")
+			console.log(confirmationBox);
+			confirmationBox.style.display = "block"
+		}
+
+		function confirm() {
+			const numbers = document.getElementById('numbersArray').value.split(",");
+			const evenNumbers = numbers.filter(number => number % 2 == 0)
+
+			const enteredNumbers = document.getElementById("userNumbers").value;
+			const evenNumberString = evenNumbers.join(",");
+			if (evenNumberString != enteredNumbers) {
+				alert("Error!")
+				return;
+			}
+			alert("Perfect, everything confirmed.")
+		}
+
+		function getRandomNumbers(noOfNumbersToCreate){
+			const numbers = [];
+			for (let i = 0; i < noOfNumbersToCreate; i++) {
+				const random = Math.round(Math.random() * 100);
+				numbers.push(random);
+			}
+			return numbers;
 		}
 	</script>
 </head>
@@ -35,6 +67,23 @@
 			<div class="col-sm-6">
 				<label for="lastName" class="form-label">Last Name</label>
 				<input id="lastName" class="form-control" type="text">
+			</div>
+		</div>
+		<div id="confirmationBox" style="display:none">
+			<div class="row mt-3 bg-light pb-3">
+				<div class="col-sm-6">
+				<label for="numbersArray" class="form-label">Numbers:</label>
+				<input id="numbersArray" class="form-control" readonly disabled type="text">
+			</div>
+			<div class="col-sm-6">
+				<label for="userNumbers" class="form-label">Enter all even numbers:</label>
+				<input id="userNumbers" class="form-control" type="text">
+			</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-12">
+					<button type="button" onclick="confirm()" class="float-end btn btn-success">Confirm</button>
+				</div>
 			</div>
 		</div>
 		<div class="row mt-3" id="warning" style="display: none">
